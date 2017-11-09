@@ -6,13 +6,13 @@ except IndexError:
     print("Usage: python Question4.py Test_images/imagename.type")
     sys.exit(1)
 bab = cv2.imread(arg1)
-cv2.imwrite('original.jpg',bab)
+cv2.imwrite('Question4_results/original.jpg',bab)
 
 grayscaled = cv2.cvtColor(bab,cv2.COLOR_BGR2GRAY)
 
 [retval,threshold] = cv2.threshold(grayscaled, 128, 255,2)
 cv2.imshow('Thresholded',threshold)
-cv2.imwrite('Thresholded.jpg',threshold)
+cv2.imwrite('Question4_results/Thresholded.jpg',threshold)
 [retval, thresh1] = cv2.threshold(grayscaled, 128, 255, cv2.THRESH_BINARY)
 cv2.imshow('Binary Threshold',thresh1)
 cv2.imwrite('Question4_results/Binary_Threshold.jpg',thresh1)

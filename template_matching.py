@@ -55,7 +55,7 @@ cv2.rectangle(match_img, (location[1], location[0]), (location[1] + temp.shape[1
 
 # Save the template matching result image (match_img)
 # ------------------ Put your code below ------------------
-cv2.imwrite('match_img.png', match_img)
+cv2.imwrite('template_images/match_img.png', match_img)
 
 # Display the template image and the matching result
 cv2.namedWindow('TemplateImage', cv2.WINDOW_NORMAL)
